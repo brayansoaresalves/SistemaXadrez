@@ -1,6 +1,6 @@
 package boardgame;
 
-public class Board {
+public class Board { // tabuleiro
 	
 	private int rows;
 	private int columns;
@@ -27,6 +27,16 @@ public class Board {
 
 	public void setColumns(int columns) {
 		this.columns = columns;
+	}
+	
+	//Metodo para retornar a peça dada uma linha e uma coluna
+	public Piece piece(int row, int column) {
+		return pieces[row][column];
+	}
+	
+	//retornar a peça pela posicão
+	public Piece piece(Position position) {
+		return pieces[position.getRow()][position.getColumn()];
 	}
 
 }
